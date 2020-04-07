@@ -20,7 +20,7 @@ public class FirstPersonalController : MonoBehaviour
     void Start()
     {
         jumpHeight = 5.0f;
-        speed = 3.0f;
+        speed = 4.0f;
         rbody = GetComponent<Rigidbody>();
         audio = GetComponent<AudioSource>();
     }
@@ -32,24 +32,20 @@ public class FirstPersonalController : MonoBehaviour
         direction.x = Input.GetAxis("Horizontal");
         direction.z = Input.GetAxis("Vertical");
         direction = direction.normalized;
+
+        //turning
         if(direction.x != 0) {
-        	rbody.MovePosition(rbody.position + transform.right*direction.x*speed*Time.deltaTime);
+            rotationX += direction.x * rotationSpeed;
+            //rbody.MovePosition(rbody.position + transform.right*direction.x*speed*Time.deltaTime);
         }
+        //forwards and back
         if(direction.z != 0) {;
         	rbody.MovePosition(rbody.position+transform.forward*direction.z*speed*Time.deltaTime);
         }
         
-        rotationX += Input.GetAxis("Mouse X")*rotationSpeed;
+        
         transform.localEulerAngles = new Vector3(-rotationY,rotationX,0);
-        //Debug.Log(transform.localEulerAngles.y);
-        //Debug.Log("rotationX" + rotationX);
-        bool isGrounded() {
-        	if(Physics.CheckSphere(feet.position,0.1f,ground)) {
-        		return true;
-        	} else {
-        		return false;
-        	}
-        }
+
         if(Input.GetButtonDown("Fire1")) {
             Debug.Log("fire");
             //audio.Play();

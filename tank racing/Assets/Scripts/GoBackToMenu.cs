@@ -18,7 +18,7 @@ public class GoBackToMenu : MonoBehaviour
     		Application.LoadLevel(0);
     	}
 
-        GUI.TextArea(new Rect(700, 20, 200, 50), "Kill: " + killCount.ToString());
+        GUI.TextArea(new Rect(700, 20, 200, 50), "time left: " + killCount.ToString());
     }
 }
 
