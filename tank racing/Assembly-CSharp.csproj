@@ -58,6 +58,8 @@
      <Compile Include="Assets\Scripts\FirstPersonalController.cs" />
      <Compile Include="Assets\Scripts\GoBackToMenu.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
+     <None Include="Assets\SimpleMilitary\Old\Materials\UnlitVertexColour_Alpha.shader" />
+     <None Include="Assets\SimpleMilitary\Old\ReadMe.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/pascaljardin/Documents/GitHub/Tank_Racing/tank racing/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
