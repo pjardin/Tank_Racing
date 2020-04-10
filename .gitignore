@@ -1,7 +1,8 @@
-tank racing/[Ll]ibrary/*
-tank racing/[Oo]bj/*
-tank racing/[Tt]emp/*
+tank racing/[Ll]ibrary
+tank racing/[Oo]bj
+tank racing/[Tt]emp
 tank racing/[Aa]ssets/[Aa]sset[Ss]tore[Tt]ools*
+tank racing/.vs
 *.csproj
 .DS_Store*
 ._*
