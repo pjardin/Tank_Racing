@@ -1,0 +1,11 @@
+tank racing/Library/*
+tank racing/obj/*
+tank racing/Temp/*
+tank racing/Assets/AssetStoreTools*
+tank racing/sysinfo.txt
+*.stackdump
+
+
+
+.DS_Store*
+._*
