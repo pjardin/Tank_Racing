@@ -10,8 +10,8 @@ public class FirstPersonalController : MonoBehaviour
 	public Transform feet; 
 	private Vector3 direction;
 	private Rigidbody rbody;
-	private float rotationSpeed = .15f; //tanks aren't known for being able to turn on a dime
-    private float turretRot = .15f; //tanks aren't known for being able to turn on a dime
+	private float rotationSpeed = 1.0f;//.15f; //tanks aren't known for being able to turn on a dime
+    private float turretRot = 1.0f;//.15f; //tanks aren't known for being able to turn on a dime
     private float rotationY = 0f;
 	private float rotationX = 0;
 	public GameObject bulletPrefab;
