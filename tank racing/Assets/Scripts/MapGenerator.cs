@@ -5,13 +5,15 @@ public class MapGenerator : MonoBehaviour {
 
 	public GameObject roadCorner;
 	public GameObject roadStraight;
+	//public LayerMask map;
 
 	public Vector2 mapSize;
 	private int offset;
 
 	void Start() {
 		offset = 30;
-
+		//roadCorner.layer = 9; //map; //add "ground" tag to objects
+		//roadStraight.layer = 9; //map; //add "ground" tag to objects
 		GenerateMap();
 	}
 
