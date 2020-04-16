@@ -6,11 +6,146 @@ public class MapGenerator : MonoBehaviour {
 	public GameObject roadCorner;
 	public GameObject roadStraight;
 	public GameObject roadT;
+	public GameObject roadEND;
+	public GameObject roadFour;
 
 	//public LayerMask map;
 
 	public Vector2Int mapSize;
 	private int offset;
+
+
+	void roadStraightX(Vector3 where)
+	{
+
+
+		Instantiate(roadStraight, new Vector3(where.x * offset, where.y * offset, where.z * offset), Quaternion.identity);
+
+	}
+
+	void roadStraightZ(Vector3 where)
+	{
+		Quaternion rot90 = Quaternion.identity;
+		rot90.eulerAngles = new Vector3(0, 270, 0);
+
+
+		Instantiate(roadStraight, new Vector3(where.x * offset, where.y * offset, where.z * offset), rot90);
+
+	}
+
+	void corner(Vector3 where)
+	{
+		Quaternion rot = Quaternion.identity;
+
+		Instantiate(roadCorner, new Vector3(where.x * offset + 10, where.y * offset, where.z * offset + 10), rot);
+
+	}
+
+	void corner270(Vector3 where)
+	{
+		Quaternion rot270 = Quaternion.identity;
+		rot270.eulerAngles = new Vector3(0, 270, 0);
+
+		Instantiate(roadCorner, new Vector3(where.x * offset - 10, where.y * offset, where.z * offset + 10), rot270);
+
+	}
+
+	void corner90(Vector3 where)
+	{
+		Quaternion rot90 = Quaternion.identity;
+		rot90.eulerAngles = new Vector3(0, 90, 0);
+
+		Instantiate(roadCorner, new Vector3(where.x * offset + 10, where.y * offset, where.z * offset - 10), rot90);
+
+	}
+
+	void corner180(Vector3 where)
+	{
+		Quaternion rot180 = Quaternion.identity;
+		rot180.eulerAngles = new Vector3(0, 180, 0);
+
+		Instantiate(roadCorner, new Vector3(where.x * offset - 10, where.y * offset, where.z * offset - 10), rot180);
+
+	}
+
+	void t(Vector3 where)
+	{
+		Quaternion rot = Quaternion.identity;
+
+		Instantiate(roadT, new Vector3(where.x * offset, where.y * offset, where.z * offset + 10), rot);
+
+	}
+
+	void t270(Vector3 where)
+	{
+		Quaternion rot270 = Quaternion.identity;
+		rot270.eulerAngles = new Vector3(0, 270, 0);
+
+		Instantiate(roadT, new Vector3(where.x * offset - 10, where.y * offset, where.z * offset), rot270);
+
+	}
+
+	void t90(Vector3 where)
+	{
+		Quaternion rot90 = Quaternion.identity;
+		rot90.eulerAngles = new Vector3(0, 90, 0);
+
+		Instantiate(roadT, new Vector3(where.x * offset + 10, where.y * offset, where.z * offset), rot90);
+
+	}
+
+	void t180(Vector3 where)
+	{
+		Quaternion rot180 = Quaternion.identity;
+		rot180.eulerAngles = new Vector3(0, 180, 0);
+
+		Instantiate(roadT, new Vector3(where.x * offset, where.y * offset, where.z * offset - 10), rot180);
+
+	}
+
+	void end(Vector3 where)
+	{
+		Quaternion rot = Quaternion.identity;
+
+		Instantiate(roadEND, new Vector3(where.x * offset, where.y * offset, where.z * offset + 5), rot);
+
+	}
+
+	void end270(Vector3 where)
+	{
+		Quaternion rot270 = Quaternion.identity;
+		rot270.eulerAngles = new Vector3(0, 270, 0);
+
+		Instantiate(roadEND, new Vector3(where.x * offset - 5, where.y * offset, where.z * offset), rot270);
+
+	}
+
+	void end90(Vector3 where)
+	{
+		Quaternion rot90 = Quaternion.identity;
+		rot90.eulerAngles = new Vector3(0, 90, 0);
+
+		Instantiate(roadEND, new Vector3(where.x * offset + 5, where.y * offset, where.z * offset), rot90);
+
+	}
+
+	void end180(Vector3 where)
+	{
+		Quaternion rot180 = Quaternion.identity;
+		rot180.eulerAngles = new Vector3(0, 180, 0);
+
+		Instantiate(roadEND, new Vector3(where.x * offset, where.y * offset, where.z * offset - 5), rot180);
+
+	}
+
+
+	void fourWay(Vector3 where)
+	{
+
+
+		Instantiate(roadFour, new Vector3(where.x * offset, where.y * offset, where.z * offset), Quaternion.identity);
+
+	}
 
 	void printMaze(string[,] maze)
 	{
@@ -165,44 +300,87 @@ public class MapGenerator : MonoBehaviour {
 						count++;
 					}
 
-					if (count == 2)
+
+                    if (count == 1)
+					{
+						if (N == true)
+						{
+							end180(new Vector3(j, 0, i));
+						}
+						else if (E == true)
+						{
+							end270(new Vector3(j, 0, i));
+						}
+						else if (S == true)
+						{
+							end(new Vector3(j, 0, i));
+						}
+						else
+						{
+							end90(new Vector3(j, 0, i));
+						}
+					}
+					else if (count == 2)
 					{
 						if (N == true && S == true)
 						{
-							Debug.Log("roadStraightZn\n");
+							roadStraightZ(new Vector3(j, 0, i));
 						}
 						else if (E == true && W == true)
 						{
-							Debug.Log("roadStraightX\n\n");
+							roadStraightX(new Vector3(j, 0, i));
 						}
 						else
 						{
 
 							if (W == true && S == true)
 							{
-								Debug.Log("corner\n\n");
+								corner180(new Vector3(j, 0, i));
 							}
 							else if (E == true && S == true)
 							{
-								Debug.Log("corner270\n\n");
+								corner90(new Vector3(j, 0, i));
 							}
 							else if (N == true && E == true)
 							{
-								Debug.Log("corner180\n\n");
+								corner(new Vector3(j, 0, i));
 							}
 							else
 							{
-								Debug.Log("corner90\n\n");
+								corner270(new Vector3(j, 0, i));
 							}
 						}
 
-						Debug.Log(count);
 
+					}
+                    else if (count == 3)
+					{
+						if (W == true && E == true && S == true)
+						{
+							t(new Vector3(j, 0, i));
+						}
+						else if (N == true && E == true && S == true)
+						{
+							t270(new Vector3(j, 0, i));
+						}
+						else if (N == true && W == true && E == true)
+						{
+							t180(new Vector3(j, 0, i));
+						}
+						else
+						{
+							t90(new Vector3(j, 0, i));
+						}
+					} else
+					{
+						fourWay(new Vector3(j, 0, i));
 					}
 
 
 				}
 
+				Debug.Log(j);
+				Debug.Log(i);
 
 
 			}
@@ -212,112 +390,18 @@ public class MapGenerator : MonoBehaviour {
 	}
 
 	void Start() {
-		mazeGen();
 		offset = 30;
 		//roadCorner.layer = 9; //map; //add "ground" tag to objects
 		//roadStraight.layer = 9; //map; //add "ground" tag to objects
 		GenerateMap();
 	}
 
-    void roadStraightX(Vector3 where)
-	{
-	
-
-		Instantiate(roadStraight, new Vector3(where.x * offset, where.y * offset, where.z * offset), Quaternion.identity);
-		
-	}
-
-	void roadStraightZ(Vector3 where)
-	{
-		Quaternion rot90 = Quaternion.identity;
-		rot90.eulerAngles = new Vector3(0, 270, 0);
-
-
-		Instantiate(roadStraight, new Vector3(where.x * offset, where.y * offset, where.z * offset ), rot90);
-		
-	}
-
-	void corner(Vector3 where)
-	{
-		Quaternion rot = Quaternion.identity;
-
-		Instantiate(roadCorner, new Vector3(where.x * offset +10 , where.y * offset, where.z * offset +10), rot);
-
-	}
-
-	void corner270(Vector3 where)
-	{
-		Quaternion rot270 = Quaternion.identity;
-		rot270.eulerAngles = new Vector3(0, 270, 0);
-
-		Instantiate(roadCorner, new Vector3(where.x * offset - 10, where.y * offset, where.z * offset + 10), rot270);
-
-	}
-
-	void corner90(Vector3 where)
-	{
-		Quaternion rot90 = Quaternion.identity;
-		rot90.eulerAngles = new Vector3(0, 90, 0);
-
-		Instantiate(roadCorner, new Vector3(where.x * offset + 10, where.y * offset, where.z * offset - 10 ), rot90);
-
-	}
-
-	void corner180(Vector3 where)
-	{
-		Quaternion rot180 = Quaternion.identity;
-		rot180.eulerAngles = new Vector3(0, 180, 0);
-
-		Instantiate(roadCorner, new Vector3(where.x * offset - 10, where.y * offset, where.z * offset - 10), rot180);
-
-	}
-
-	void t(Vector3 where)
-	{
-		Quaternion rot = Quaternion.identity;
-
-		Instantiate(roadT, new Vector3(where.x * offset , where.y * offset, where.z * offset + 10), rot);
-
-	}
-
-	void t270(Vector3 where)
-	{
-		Quaternion rot270 = Quaternion.identity;
-		rot270.eulerAngles = new Vector3(0, 270, 0);
-
-		Instantiate(roadT, new Vector3(where.x * offset - 10, where.y * offset, where.z * offset ), rot270);
-
-	}
-
-	void t90(Vector3 where)
-	{
-		Quaternion rot90 = Quaternion.identity;
-		rot90.eulerAngles = new Vector3(0, 90, 0);
-
-		Instantiate(roadT, new Vector3(where.x * offset + 10, where.y * offset, where.z * offset), rot90);
-
-	}
-
-	void t180(Vector3 where)
-	{
-		Quaternion rot180 = Quaternion.identity;
-		rot180.eulerAngles = new Vector3(0, 180, 0);
-
-		Instantiate(roadT, new Vector3(where.x * offset , where.y * offset, where.z * offset -10), rot180);
-
-	}
-
 
 	public void GenerateMap()
 	{
+		mazeGen();
+
 		Debug.Log("Generated Map");
-
-		Quaternion rot90 = Quaternion.identity;
-		rot90.eulerAngles = new Vector3(0, 90, 0);
-
-		Quaternion rot180 = Quaternion.identity;
-		rot180.eulerAngles = new Vector3(0, 180, 0);
-
 
 		/*
 		corner180(new Vector3(0, 0, 0));
@@ -325,7 +409,7 @@ public class MapGenerator : MonoBehaviour {
 		corner(new Vector3(1, 0, 1));
 		corner270(new Vector3(0, 0, 1));
         */
-		
+		/*
 		corner(new Vector3(0, 0, 0));
 
 		t(new Vector3(1, 0, 0));
@@ -334,7 +418,6 @@ public class MapGenerator : MonoBehaviour {
 		corner270(new Vector3(3, 0, 0));
 
 		t270(new Vector3(0, 0, 2));
-		roadStraightZ(new Vector3(0, 0, 1));
 
 		corner180(new Vector3(3, 0, 3));
 
@@ -345,8 +428,17 @@ public class MapGenerator : MonoBehaviour {
 
 		t90(new Vector3(3, 0, 2));
 		roadStraightZ(new Vector3(3, 0, 1));
-        
-        /*
+
+
+		end90(new Vector3(1, 0, 2));
+		end270(new Vector3(2, 0, 2));
+
+		end(new Vector3(1, 0, 4));
+		end180(new Vector3(1, 0, -1));
+
+		fourWay(new Vector3(0, 0, 1));
+        */
+		/*
 		corner(new Vector3(0, 0, 0));
 
 		corner90(new Vector3(0, 0, 1));

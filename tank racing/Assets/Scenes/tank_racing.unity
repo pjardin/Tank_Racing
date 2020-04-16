@@ -1048,6 +1048,9 @@ MonoBehaviour:
   roadStraight: {fileID: 8660398566782557033, guid: 49f9b0547fedf485da2eafb004b44404,
     type: 3}
   roadT: {fileID: 100000, guid: b7f7c04d5cd704e9fa925533db622d45, type: 3}
+  roadEND: {fileID: 4629414872337558797, guid: 8e444d26313f3446db0f8e293112b2ef, type: 3}
+  roadFour: {fileID: 4562760219806717685, guid: 1f467caaa3f4548839e969f1b0876bb9,
+    type: 3}
   mapSize: {x: 4, y: 4}
 --- !u!1 &716482816
 GameObject:
