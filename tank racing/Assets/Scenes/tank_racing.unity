@@ -1046,7 +1046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roadCorner: {fileID: 100000, guid: 3dadd8776662d4e45bc31b48c40d3296, type: 3}
   roadStraight: {fileID: 100000, guid: 0582cbaf6d6314de7be9fa6917f8fd5d, type: 3}
-  mapSize: {x: 3, y: 3}
+  mapSize: {x: 4, y: 4}
 --- !u!1 &716482816
 GameObject:
   m_ObjectHideFlags: 0
