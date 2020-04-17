@@ -7,14 +7,15 @@ public class FirstPersonalController : MonoBehaviour
     //public float jumpHeight;
 
     private Rigidbody rbody;    //tanks rigid body
-    //public LayerMask ground;
-
+                                //public LayerMask ground;
+    public bool mouseEnable = false;
 
     //Movement
     public float curSpeed;  //current speed of tank in some units
     public float speedLimit = 40; //max speed of tank in some units
     public float maxLimit = 150;    //maximum speed limit
     public float minLimit = 30; //minimum speed limit
+    public float vodkaSpeed = 10;
     public float rotationSpeed = .75f;   //applies multiplier to track speed in opposite directions (can be any number, recomend between 0 and 1, negative inverts controls)
     public float reverseSpeed = .66f;   //applies multiplier to track speed in when in reverse (can be any number, recomend between 0 and 1, negative means tank cant reverse)
     public float accel = 1000f; //tank acceleration, value is the torque applied to the tread contact wheel in newtons, the tanks has a lot of mass (negative inverts controls)
@@ -62,8 +63,7 @@ public class FirstPersonalController : MonoBehaviour
     private bool Rdust = false;
     public ParticleSystem dustSpawnRr;
     public ParticleSystem dustSpawnRf;
-    //public GameObject exhaust;
-    public GameObject muzzle;
+    public ParticleSystem muzzle;
 
     // Start is called before the first frame update
     void Start() {
@@ -74,6 +74,7 @@ public class FirstPersonalController : MonoBehaviour
         dustSpawnLr.Stop();
         dustSpawnRf.Stop();
         dustSpawnRr.Stop();
+        muzzle.Stop();
     }
 
     // Update is called once per frame
@@ -82,6 +83,14 @@ public class FirstPersonalController : MonoBehaviour
         direction.x = Input.GetAxisRaw("Vertical"); //GetAxisRaw  is always -1, 0, or 1 so no input lag
         direction.z = Input.GetAxisRaw("Horizontal");
         turretDirection = Vector3.zero;
+        if (mouseEnable) {
+            turretDirection.x = Input.GetAxis("Mouse X");
+            turretDirection.y = -Input.GetAxis("Mouse Y");
+        } else {
+            turretDirection.x = Input.GetAxis("Horizontal2");
+            turretDirection.y = Input.GetAxis("Vertical2");
+        }
+
         if (Input.GetKey(KeyCode.LeftShift)) {
             float f = Mathf.MoveTowardsAngle(camPivot.transform.localEulerAngles.y, trotationX, camRot * Time.deltaTime);
             camPivot.transform.localEulerAngles = new Vector3(0, f, 0);
@@ -90,8 +99,6 @@ public class FirstPersonalController : MonoBehaviour
             float f = Mathf.MoveTowardsAngle(camPivot.transform.localEulerAngles.y, 0, camRot * Time.deltaTime);
             camPivot.transform.localEulerAngles = new Vector3(0, f, 0);
         }
-            turretDirection.x = Input.GetAxis("Horizontal2");
-            turretDirection.y = Input.GetAxis("Vertical2");
 
         //Forward/Rotational movement
         if (direction.x < 0) { direction.x *= reverseSpeed; } // if reversing apply reverse speed mutiplier
@@ -185,13 +192,13 @@ public class FirstPersonalController : MonoBehaviour
     void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("Russian Water")) {
             if (speedLimit < maxLimit) {
-                speedLimit += 10;
+                speedLimit += vodkaSpeed;
             }
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Regular Water") {
             if (speedLimit > minLimit) {
-                speedLimit -= 10;
+                speedLimit -= vodkaSpeed;
             }
             Destroy(collision.gameObject);
         }
@@ -210,6 +217,7 @@ public class FirstPersonalController : MonoBehaviour
             bulletSpawn.position,
             bulletSpawn.rotation);
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.up * bulletSpeed;
+        muzzle.Play();
         rbody.AddForceAtPosition(-bulletSpawn.up * recoil, bulletSpawn.transform.position);
         Destroy(bullet, 5.0f);
     }
