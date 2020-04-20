@@ -6,16 +6,16 @@ public class GoBackToMenu : MonoBehaviour
 {
 	public GUISkin skin;
     public float killCount;
-    // Start is called before the first frame update
-    void Start()
+    bool finished = false;    
+    public void setFinished()
     {
-        
+        finished = true;
     }
-
     void OnGUI() {
     	GUI.skin = skin;
-    	if(GUI.Button(new Rect(20,20,200,100),"Menu")) {
+    	if(GUI.Button(new Rect(20,20,200,100),"Menu") || finished==true ) {
     		Application.LoadLevel(0);
+            finished = false;
     	}
 
         GUI.TextArea(new Rect(700, 20, 200, 50), "time left: " + killCount.ToString());
