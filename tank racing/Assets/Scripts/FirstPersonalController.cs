@@ -54,10 +54,6 @@ public class FirstPersonalController : MonoBehaviour
     public int ammo = 50;
 
     //Audio Stuff
-    //private AudioSource engineAudio;  //self explanitory
-    //private AudioSource treadAudio;  //self explanitory
-    //private AudioSource fireAudio;    //audio for firing a shell
-    //private AudioSource explosionAudio; //audio for shell exploding
     private AudioSource[] aSource; //array of all AudioSource Components
     private AudioSource fireSFX; //sound that playes when firing
     private AudioSource engineSFX;   //Sound that playes when driving
@@ -117,25 +113,19 @@ public class FirstPersonalController : MonoBehaviour
         if (direction.x < 0) { direction.x *= reverseSpeed; } // if reversing apply reverse speed mutiplier
         curSpeed = rbody.velocity.magnitude * 3.6f;
         float accelR = accel;
-
         if (direction.x != 0) {
             accelR *= (direction.x);    //apply direction to acceleration
             EngineSound();
         }  
-
         if (direction.z != 0) {
             accelR *= (-rotationSpeed * direction.z);   // if turnig apply rotation speed mutiplier
             EngineSound();
-
         } 
-
         if (direction.x == 0 && direction.z == 0)
         {
             curDriv = false;
             engineSFX.Stop();
         }
-
-        //Debug.Log("direction: " + direction + ", curSpeed:" + curSpeed + " is stopped:" + dustSpawnRr.isStopped + " dust:" + ldust);
         if ((direction != Vector3.zero) && (curSpeed >= 3.0f) && !Rdust) {
             Rdust = true;
             dustSpawnRr.Play();
@@ -145,14 +135,11 @@ public class FirstPersonalController : MonoBehaviour
             dustSpawnRr.Stop();
             dustSpawnRf.Stop(); 
         }
-
         if (curSpeed > speedLimit && direction.z == 0) { accelR = 0; } //if above speed limit and not turing, motors apply 0 torque
-        
 
         float accelL = accel;
         if (direction.x != 0) { accelL *= (direction.x); }
         if (direction.z != 0) { accelL *= (rotationSpeed * direction.z); } // if turnig apply rotation speed mutiplier opposite of right tread        pS.enableEmission = true;
-        
         if (direction != Vector3.zero && curSpeed >= 3.0f && !Ldust) {
             Ldust = true;
             dustSpawnLr.Play(); 
@@ -162,7 +149,6 @@ public class FirstPersonalController : MonoBehaviour
             dustSpawnLr.Stop(); 
             dustSpawnLf.Stop(); 
         }
-
         if (curSpeed > speedLimit && direction.z == 0) { accelL = 0; }
 
         foreach (Transform contact in treadR) { //for each WheelCollider in TreadR apply torque in direction to tank, this is really janky, need to adjust traction on wheelcollision objects

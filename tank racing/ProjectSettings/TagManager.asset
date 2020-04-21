@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Russian Water
   - Regular Water
+  - Tank
   layers:
   - Default
   - TransparentFX

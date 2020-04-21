@@ -16,11 +16,10 @@ public class FinishLineEvent : MonoBehaviour
     }
     void OnTriggerEnter(Collider collision)
     {
-
-        if (collision.gameObject==tank)
+        if (collision.gameObject==tank || collision.gameObject.CompareTag("Tank"))
         {
-            
             Debug.Log("tank Entered");
+            Destroy(gameObject);
             fanFare.Play();
             StartCoroutine(waitForFan()); // waits until fanfare is done
             
