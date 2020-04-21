@@ -18,7 +18,7 @@ public class GoBackToMenu : MonoBehaviour
             finished = false;
     	}
 
-        GUI.TextArea(new Rect(Screen.width/2-100, 20, 200, 50), "time left: " + killCount.ToString());
+        //GUI.TextArea(new Rect(Screen.width/2-100, 20, 200, 50), "time left: " + killCount.ToString());
     }
 }
 
