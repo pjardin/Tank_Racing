@@ -7,3 +7,4 @@
 *.csproj
 .DS_Store*
 ._*
+/tank racing/Assets/MapGenerator/

@@ -30,7 +30,7 @@ public class MapGenerator : MonoBehaviour {
 	//public LayerMask map;
 
 	public Vector2Int mapSize;
-	private int offset;
+	public float offset = 25;
 
 
 	void roadStraightX(Vector3 where)
