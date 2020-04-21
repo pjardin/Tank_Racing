@@ -19,7 +19,6 @@ public class FinishLineEvent : MonoBehaviour
         if (collision.gameObject==tank || collision.gameObject.CompareTag("Tank"))
         {
             Debug.Log("tank Entered");
-            Destroy(gameObject);
             fanFare.Play();
             StartCoroutine(waitForFan()); // waits until fanfare is done
             
