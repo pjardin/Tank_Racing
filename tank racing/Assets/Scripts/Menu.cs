@@ -22,7 +22,14 @@ public class Menu : MonoBehaviour
     	GUI.skin = mySkin;
     	if(GUI.Button(new Rect(origin_x,origin_y,buttonWidth,buttonHeight), "Tank Racing!")) {
     		Application.LoadLevel(1);
-    	}if(GUI.Button(new Rect(origin_x,origin_y+buttonHeight*1+60,buttonWidth,buttonHeight), "Quit")) {
+    	}
+
+        if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * 1 + 60, buttonWidth, buttonHeight), "How to Play"))
+        {
+            Application.LoadLevel(2);
+        }
+
+            if (GUI.Button(new Rect(origin_x,origin_y+buttonHeight*3+60,buttonWidth,buttonHeight), "Quit")) {
     		#if UNITY_EDITOR
     			UnityEditor.EditorApplication.isPlaying = false;
     		#else
