@@ -9,6 +9,7 @@ public class FirstPersonalController : MonoBehaviour
     private Rigidbody rbody;    //tanks rigid body
                                 //public LayerMask ground;
     public bool mouseEnable = false;
+    
 
     //Movement
     public float curSpeed;  //current speed of tank in some units
@@ -19,6 +20,7 @@ public class FirstPersonalController : MonoBehaviour
     public float rotationSpeed = .75f;   //applies multiplier to track speed in opposite directions (can be any number, recomend between 0 and 1, negative inverts controls)
     public float reverseSpeed = .66f;   //applies multiplier to track speed in when in reverse (can be any number, recomend between 0 and 1, negative means tank cant reverse)
     public float accel = 1000f; //tank acceleration, value is the torque applied to the tread contact wheel in newtons, the tanks has a lot of mass (negative inverts controls)
+    
 
     //Camera
     public GameObject camPivot;
@@ -39,6 +41,7 @@ public class FirstPersonalController : MonoBehaviour
     private float turRotLimX = 100f;    //turret left/right turn limit
     private float turRotLimYUp = 32f;   //turret up limit in degrees
     private float turRotLimYDn = -11f;  //turret down limit in degrees
+    
 
     //Bullet Stuff
     public Transform bulletSpawn;   //shell spawn location
@@ -55,6 +58,10 @@ public class FirstPersonalController : MonoBehaviour
     //private AudioSource treadAudio;  //self explanitory
     //private AudioSource fireAudio;    //audio for firing a shell
     //private AudioSource explosionAudio; //audio for shell exploding
+    private AudioSource[] aSource; //array of all AudioSource Components
+    private AudioSource fireSFX; //sound that playes when firing
+    private AudioSource engineSFX;   //Sound that playes when driving
+    private bool curDriv;    //checks if tank engine is currently running
 
     //Special Effects
     private bool Ldust = false;
@@ -69,12 +76,18 @@ public class FirstPersonalController : MonoBehaviour
     void Start() {
         //jumpHeight = 5.0f; // tanks cant jump, but...
         rbody = GetComponent<Rigidbody>();
-        //audio = GetComponent<AudioSource>();   
+
+        aSource = GetComponents<AudioSource>();
+        fireSFX = aSource[0];
+        engineSFX = aSource[1];
+
         dustSpawnLf.Stop();
         dustSpawnLr.Stop();
         dustSpawnRf.Stop();
         dustSpawnRr.Stop();
         muzzle.Stop();
+        curDriv = false;
+
     }
 
     // Update is called once per frame
@@ -104,8 +117,24 @@ public class FirstPersonalController : MonoBehaviour
         if (direction.x < 0) { direction.x *= reverseSpeed; } // if reversing apply reverse speed mutiplier
         curSpeed = rbody.velocity.magnitude * 3.6f;
         float accelR = accel;
-        if (direction.x != 0) { accelR *= (direction.x); }  //apply direction to acceleration
-        if (direction.z != 0) { accelR *= (-rotationSpeed * direction.z); } // if turnig apply rotation speed mutiplier
+
+        if (direction.x != 0) {
+            accelR *= (direction.x);    //apply direction to acceleration
+            EngineSound();
+        }  
+
+        if (direction.z != 0) {
+            accelR *= (-rotationSpeed * direction.z);   // if turnig apply rotation speed mutiplier
+            EngineSound();
+
+        } 
+
+        if (direction.x == 0 && direction.z == 0)
+        {
+            curDriv = false;
+            engineSFX.Stop();
+        }
+
         //Debug.Log("direction: " + direction + ", curSpeed:" + curSpeed + " is stopped:" + dustSpawnRr.isStopped + " dust:" + ldust);
         if ((direction != Vector3.zero) && (curSpeed >= 3.0f) && !Rdust) {
             Rdust = true;
@@ -183,6 +212,7 @@ public class FirstPersonalController : MonoBehaviour
 
         //Fire!!!
         if (Input.GetButtonDown("Fire1") && Time.time > cooldown && ammo > 0) {
+            fireSFX.Play();
             cooldown = Time.time + fireRate;
             ammo--;
             Fire();
@@ -220,5 +250,14 @@ public class FirstPersonalController : MonoBehaviour
         muzzle.Play();
         rbody.AddForceAtPosition(-bulletSpawn.up * recoil, bulletSpawn.transform.position);
         Destroy(bullet, 5.0f);
+    }
+
+    private void EngineSound()
+    {
+        if (!curDriv)
+        {
+            curDriv = true;
+            engineSFX.Play();
+        }
     }
 }
