@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 91216155}
   m_Layer: 0
   m_Name: Contact (1)
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 164075631}
   m_Layer: 0
   m_Name: Contact (4)
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 225458443}
   m_Layer: 0
   m_Name: FX_TireSmoke RR
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4904,7 +4904,7 @@ GameObject:
   - component: {fileID: 228798408}
   m_Layer: 0
   m_Name: SK_Veh_Tank_01_MgGun_01
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4997,7 +4997,7 @@ GameObject:
   - component: {fileID: 462036868}
   m_Layer: 0
   m_Name: Muzzle
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9859,7 +9859,7 @@ GameObject:
   - component: {fileID: 546849923}
   m_Layer: 0
   m_Name: Contact
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9985,7 +9985,7 @@ GameObject:
   - component: {fileID: 653835968}
   m_Layer: 0
   m_Name: Contact (2)
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10047,7 +10047,7 @@ GameObject:
   - component: {fileID: 710114420}
   m_Layer: 0
   m_Name: SK_Veh_Tank_01_Lid_01
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10170,7 +10170,7 @@ GameObject:
   - component: {fileID: 769915152}
   m_Layer: 0
   m_Name: Contact
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10674,7 +10674,7 @@ GameObject:
   - component: {fileID: 1050874732}
   m_Layer: 0
   m_Name: Contact (6)
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10737,7 +10737,7 @@ GameObject:
   - component: {fileID: 1058066852}
   m_Layer: 0
   m_Name: SK_Veh_Tank_01_Barrel_01
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10830,7 +10830,7 @@ GameObject:
   - component: {fileID: 1061486183}
   m_Layer: 0
   m_Name: Contact (3)
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10892,7 +10892,7 @@ GameObject:
   - component: {fileID: 1087939121}
   m_Layer: 0
   m_Name: FX_ExaustSmoke
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15536,7 +15536,7 @@ GameObject:
   - component: {fileID: 1102822970}
   m_Layer: 0
   m_Name: Camera Pivot
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15568,7 +15568,7 @@ GameObject:
   - component: {fileID: 1114415246}
   m_Layer: 0
   m_Name: Contact (2)
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15630,7 +15630,7 @@ GameObject:
   - component: {fileID: 1334636684}
   m_Layer: 0
   m_Name: FX_TireSmoke LF
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20274,7 +20274,7 @@ GameObject:
   - component: {fileID: 1346235150}
   m_Layer: 0
   m_Name: Left Tread
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20313,7 +20313,7 @@ GameObject:
   - component: {fileID: 1350689597}
   m_Layer: 0
   m_Name: FX_TireSmoke RF
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24958,7 +24958,7 @@ GameObject:
   - component: {fileID: 1508588845}
   m_Layer: 0
   m_Name: Contact (6)
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25164,7 +25164,7 @@ GameObject:
   - component: {fileID: 1605187241}
   m_Layer: 0
   m_Name: FX_TireSmoke LR
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29809,7 +29809,7 @@ GameObject:
   - component: {fileID: 1658946135}
   m_Layer: 0
   m_Name: Contact (3)
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30009,7 +30009,7 @@ GameObject:
   - component: {fileID: 1698834968}
   m_Layer: 0
   m_Name: Right Tread
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30049,7 +30049,7 @@ GameObject:
   - component: {fileID: 1705752652}
   m_Layer: 0
   m_Name: SK_Veh_Tank_01_Turret_01
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30237,7 +30237,7 @@ GameObject:
   - component: {fileID: 1720777678}
   m_Layer: 0
   m_Name: Contact (5)
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30299,7 +30299,7 @@ GameObject:
   - component: {fileID: 1815447472}
   m_Layer: 0
   m_Name: SK_Veh_Tank_01_Lid_02
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30377,7 +30377,7 @@ GameObject:
   - component: {fileID: 1966810073}
   m_Layer: 0
   m_Name: Contact (4)
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30439,7 +30439,7 @@ GameObject:
   - component: {fileID: 1981748336}
   m_Layer: 0
   m_Name: Contact (1)
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30500,7 +30500,7 @@ GameObject:
   - component: {fileID: 1986342463}
   m_Layer: 0
   m_Name: Contact (5)
-  m_TagString: Tank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
