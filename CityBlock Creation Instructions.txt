@@ -1,0 +1,19 @@
+Place assests in empty map block of whatever size you want
+
+buildings:
+	add rigidbody component, set is kinematic true
+	add mesh collider, set convex true
+	set layer and tag to buildings
+	
+moveable objects:
+	add rigidbody component, set is kinematic true
+	add mesh collider, set convex true
+	set tag to debris
+	
+ground/ immovable objects:
+	add mesh collider, set convex true
+	set tag and layer to ground
+	
+to add tile to script
+	in the main map block set varity in script, to adjust spawn chances
+	increase tile size list by one and add to new element
