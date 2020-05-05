@@ -67,6 +67,8 @@ public class FirstPersonalController : MonoBehaviour
     public ParticleSystem dustSpawnRr;
     public ParticleSystem dustSpawnRf;
     public ParticleSystem muzzle;
+    public GameObject compass;
+    public Transform North;
 
     // Start is called before the first frame update
     void Start() {
@@ -88,6 +90,8 @@ public class FirstPersonalController : MonoBehaviour
 
     // Update is called once per frame
     private void Update() {
+        compass.transform.LookAt(North);
+
         direction = Vector3.zero;
         direction.x = Input.GetAxisRaw("Vertical"); //GetAxisRaw  is always -1, 0, or 1 so no input lag
         direction.z = Input.GetAxisRaw("Horizontal");

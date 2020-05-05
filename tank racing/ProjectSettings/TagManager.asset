@@ -23,10 +23,10 @@ TagManager:
   - Post Processing
   - Ground
   - Building
-  - Debris
+  - Ragdolls
   - Tank
-  - Russian Water
-  - Regular Water
+  - Drops
+  - Ground Debris
   - 
   - 
   - 

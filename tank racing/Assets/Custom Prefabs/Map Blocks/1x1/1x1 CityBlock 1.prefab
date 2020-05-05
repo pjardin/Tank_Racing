@@ -1257,7 +1257,7 @@ GameObject:
   - component: {fileID: 3856312188420975595}
   - component: {fileID: 5131379707519739701}
   - component: {fileID: 3844171018945053881}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Building_OfficeStepped_Blue
   m_TagString: Building
   m_Icon: {fileID: 0}
