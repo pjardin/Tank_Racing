@@ -125,3 +125,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shellExplode: {fileID: 191186, guid: 079954accd64b32419ec069129c81273, type: 3}
+  BuildingExplode: {fileID: 2490640679961388575, guid: ca1837aa40d54404a939baf5504b13f9,
+    type: 3}

@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1767183583166226672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1767183583166226674}
+  - component: {fileID: 1767183583166226668}
+  m_Layer: 0
+  m_Name: Events
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1767183583166226674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767183583166226672}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1767183583166226668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767183583166226672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e219779f572144ab6c7f14f22add4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CityZoneCount: 500
+  BigSectorCount: 2000
+  SqareLength: 30
+  CityCentre: {x: 0, y: 0, z: 0}
+  List1x1:
+  - {fileID: -8114756835619805400, guid: 3bb651ab30c53294d9571a68496c5fa2, type: 3}
+  - {fileID: -4126322400153993746, guid: 823b64d3333da724c91eedfbf3d6f02d, type: 3}
+  - {fileID: 8233546804885723414, guid: 290d4027cee73354e94d066f2626d14d, type: 3}
+  - {fileID: 777560275799401594, guid: 8665cf585b5a70a4b8ae81e31718e1c5, type: 3}
+  - {fileID: -7362595132410676928, guid: 1f7bda699e64162499978a8a082e9df4, type: 3}
+  - {fileID: -8333476297562364376, guid: 6c4ea9b69d8a59e4194ede3970b45b53, type: 3}
+  - {fileID: -7188695661537102701, guid: 83e12a3bbc20bc4449a417b71c32c3e8, type: 3}
+  List1x2:
+  - {fileID: 3202642640930813091, guid: c7f5754c60b92b24f95d10f648235a85, type: 3}
+  - {fileID: 3202642640930813091, guid: 1509722282360f741b2eff956ba1077e, type: 3}
+  - {fileID: 3202642640930813091, guid: 45eccfc4be6f49345a1d19b30baadc3c, type: 3}
+  ListAngle:
+  - {fileID: 394047581912260023, guid: 9c10da029618d99429f8de1b76771b8c, type: 3}
+  - {fileID: 394047581912260023, guid: a6ce2d31012776541aa1386cc67cebe5, type: 3}
+  ListSqare:
+  - {fileID: 3349235215452746953, guid: 1eb44fceea3cc564a97a2ebf00974a66, type: 3}
+  - {fileID: 3349235215452746953, guid: 6c994c4a83840e642b6bab9db5bd1495, type: 3}
+  - {fileID: 3349235215452746953, guid: 2e18058bb4d9cde489a97658b0722e73, type: 3}
+  MapLength: 0

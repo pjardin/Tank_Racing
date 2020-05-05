@@ -7,6 +7,10 @@ TagManager:
   - Russian Water
   - Regular Water
   - Tank
+  - Building
+  - Debris
+  - Ground
+  - FX
   layers:
   - Default
   - TransparentFX
@@ -17,12 +21,12 @@ TagManager:
   - 
   - 
   - Post Processing
-  - ground
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Building
+  - Debris
+  - Tank
+  - Russian Water
+  - Regular Water
   - 
   - 
   - 

@@ -131,7 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 91216154}
   - component: {fileID: 91216155}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Contact (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 164075630}
   - component: {fileID: 164075631}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Contact (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 225458444}
   - component: {fileID: 225458442}
   - component: {fileID: 225458443}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FX_TireSmoke RR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4902,7 +4902,7 @@ GameObject:
   - component: {fileID: 228798410}
   - component: {fileID: 228798409}
   - component: {fileID: 228798408}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SK_Veh_Tank_01_MgGun_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4995,7 +4995,7 @@ GameObject:
   - component: {fileID: 462036869}
   - component: {fileID: 462036867}
   - component: {fileID: 462036868}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9857,7 +9857,7 @@ GameObject:
   m_Component:
   - component: {fileID: 546849922}
   - component: {fileID: 546849923}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Contact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9938,7 +9938,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &644928088
 MonoBehaviour:
@@ -9947,7 +9947,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 644928086}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a8d2367113fb4fe890cf556e3af73c1, type: 3}
   m_Name: 
@@ -9983,7 +9983,7 @@ GameObject:
   m_Component:
   - component: {fileID: 653835967}
   - component: {fileID: 653835968}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Contact (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10045,7 +10045,7 @@ GameObject:
   - component: {fileID: 710114419}
   - component: {fileID: 710114421}
   - component: {fileID: 710114420}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SK_Veh_Tank_01_Lid_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10168,7 +10168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 769915151}
   - component: {fileID: 769915152}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Contact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10236,7 +10236,7 @@ GameObject:
   - component: {fileID: 932834266}
   - component: {fileID: 932834264}
   - component: {fileID: 932834265}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SK_Veh_Tank_01
   m_TagString: Tank
   m_Icon: {fileID: 0}
@@ -10559,7 +10559,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 932834263}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2, y: 5, z: 10.04}
+  m_LocalPosition: {x: 0, y: 21.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1705752651}
@@ -10568,7 +10568,7 @@ Transform:
   - {fileID: 1102822970}
   - {fileID: 1087939120}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &947035296
 GameObject:
@@ -10660,7 +10660,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1050874730
 GameObject:
@@ -10672,7 +10672,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1050874731}
   - component: {fileID: 1050874732}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Contact (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10735,7 +10735,7 @@ GameObject:
   - component: {fileID: 1058066854}
   - component: {fileID: 1058066853}
   - component: {fileID: 1058066852}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SK_Veh_Tank_01_Barrel_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10828,7 +10828,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1061486182}
   - component: {fileID: 1061486183}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Contact (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10890,7 +10890,7 @@ GameObject:
   - component: {fileID: 1087939120}
   - component: {fileID: 1087939122}
   - component: {fileID: 1087939121}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FX_ExaustSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15534,7 +15534,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1102822970}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Camera Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15566,7 +15566,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1114415245}
   - component: {fileID: 1114415246}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Contact (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15628,7 +15628,7 @@ GameObject:
   - component: {fileID: 1334636685}
   - component: {fileID: 1334636683}
   - component: {fileID: 1334636684}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FX_TireSmoke LF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20272,7 +20272,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1346235150}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Left Tread
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20311,7 +20311,7 @@ GameObject:
   - component: {fileID: 1350689598}
   - component: {fileID: 1350689596}
   - component: {fileID: 1350689597}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FX_TireSmoke RF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24956,7 +24956,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1508588844}
   - component: {fileID: 1508588845}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Contact (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25019,7 +25019,7 @@ GameObject:
   - component: {fileID: 1578132925}
   - component: {fileID: 1578132924}
   - component: {fileID: 1578132923}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -25162,7 +25162,7 @@ GameObject:
   - component: {fileID: 1605187242}
   - component: {fileID: 1605187240}
   - component: {fileID: 1605187241}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FX_TireSmoke LR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29807,7 +29807,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1658946134}
   - component: {fileID: 1658946135}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Contact (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30007,7 +30007,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1698834968}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Right Tread
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30047,7 +30047,7 @@ GameObject:
   - component: {fileID: 1705752654}
   - component: {fileID: 1705752653}
   - component: {fileID: 1705752652}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SK_Veh_Tank_01_Turret_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30223,7 +30223,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 140, y: -30, z: 0}
 --- !u!1 &1720777676
 GameObject:
@@ -30235,7 +30235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1720777677}
   - component: {fileID: 1720777678}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Contact (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30297,7 +30297,7 @@ GameObject:
   - component: {fileID: 1815447471}
   - component: {fileID: 1815447473}
   - component: {fileID: 1815447472}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SK_Veh_Tank_01_Lid_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30375,7 +30375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1966810072}
   - component: {fileID: 1966810073}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Contact (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30437,7 +30437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1981748335}
   - component: {fileID: 1981748336}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Contact (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30498,7 +30498,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1986342462}
   - component: {fileID: 1986342463}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Contact (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30670,7 +30670,7 @@ Transform:
   m_Children:
   - {fileID: 714311195892323748}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!33 &714311197986406170
 MeshFilter:
@@ -30766,6 +30766,62 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1767183584430479687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767183584430479707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e219779f572144ab6c7f14f22add4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CityZoneCount: 50
+  BigSectorCount: 20
+  SqareLength: 60
+  CityCentre: {x: 0, y: 0, z: 0}
+  List1x1:
+  - {fileID: 1209529606864065295, guid: abb9872422f3e714292e17d9f86018f4, type: 3}
+  - {fileID: 1496242215936690664, guid: 46e1d81d57a709d45be7ceaf4a00c6f9, type: 3}
+  List1x2:
+  - {fileID: 1821160043245881720, guid: 3fde08417c1626f46bf9bf3b96dd7133, type: 3}
+  ListAngle:
+  - {fileID: 3259199963843948064, guid: b58af458b6a37fb46a129c6c7f024043, type: 3}
+  ListSqare:
+  - {fileID: 7547326698740222382, guid: cf7f93f99409ce04ca9881bef0d9ca2e, type: 3}
+--- !u!4 &1767183584430479705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767183584430479707}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1767183584430479707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1767183584430479705}
+  - component: {fileID: 1767183584430479687}
+  m_Layer: 0
+  m_Name: create enviroment 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!54 &2400178833821054180
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -30810,11 +30866,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2400178833821054181}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 38.82}
+  m_LocalPosition: {x: -42.05, y: 2, z: 2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2400178833821054233
 MeshFilter:
@@ -30893,7 +30949,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3850180727795068981}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 500, y: 1, z: 500}
   m_Children: []
   m_Father: {fileID: 0}
@@ -30911,9 +30967,9 @@ GameObject:
   - component: {fileID: 3850180727795068976}
   - component: {fileID: 3850180727795068983}
   - component: {fileID: 3850180727795068982}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

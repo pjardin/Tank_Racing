@@ -225,6 +225,9 @@ public class FirstPersonalController : MonoBehaviour
             }
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.tag == "Debris") {
+            collision.gameObject.GetComponent<Rigidbody>().isKinematic = false; 
+        }
     }
 
     private void Fire() {
