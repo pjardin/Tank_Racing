@@ -10365,7 +10365,7 @@ MonoBehaviour:
   recoil: 100000
   fireRate: 1
   maxAmmo: 50
-  ammo: 50
+  ammo: 10
   dustSpawnLr: {fileID: 1605187240}
   dustSpawnLf: {fileID: 1334636683}
   dustSpawnRr: {fileID: 225458442}
@@ -30471,6 +30471,7 @@ MonoBehaviour:
   finish: {fileID: 4355988314135795838, guid: 0b9915066ece141e69e81b48ae3c3c38, type: 3}
   tank: {fileID: 932834263}
   line: {fileID: 343223933}
+  offset: 10
 --- !u!4 &1767183584430479705
 Transform:
   m_ObjectHideFlags: 0

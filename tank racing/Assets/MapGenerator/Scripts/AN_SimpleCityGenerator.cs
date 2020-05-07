@@ -21,6 +21,8 @@ public class AN_SimpleCityGenerator : MonoBehaviour
     public GameObject line;
 
 
+    public int offset;
+
     private void Start()
     {
         Debug.Log("Generating in game object : " + gameObject.name);
@@ -195,7 +197,7 @@ public class AN_SimpleCityGenerator : MonoBehaviour
                 {
                     case (1): // 1x1
                         {
-                            if (createdStart == false && (x >= MapLength / 2) && (y >= MapLength / 2)) {
+                            if (createdStart == false && (x >= MapLength / 2 - offset) && (y >= MapLength / 2 - offset)) {
                                 Debug.Log("CREATED START!");
 
                                 Instantiate(start, new Vector3Int(x - MapLength / 2 + CityCentre.x, 0, y - MapLength / 2 + CityCentre.y) * SqareLength, Quaternion.Euler(0, 90 * Random.Range(0, 4), 0));
@@ -204,7 +206,7 @@ public class AN_SimpleCityGenerator : MonoBehaviour
 
                                 createdStart = true;
                             }
-                            else if (createdFinish == false && (x >= MapLength / 2) && (y >= MapLength / 2))
+                            else if (createdFinish == false && (x >= MapLength / 2 + offset) && (y >= MapLength / 2 + offset))
                             {
                                 Debug.Log("CREATED finish!");
 

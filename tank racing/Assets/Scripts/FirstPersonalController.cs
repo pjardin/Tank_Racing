@@ -51,7 +51,7 @@ public class FirstPersonalController : MonoBehaviour
     private float cooldown = 0;
     public float fireRate = 1;
     public int maxAmmo = 50;
-    public int ammo = 50;
+    public int ammo = 10;
 
     //Audio Stuff
     private AudioSource[] aSource; //array of all AudioSource Components
@@ -223,24 +223,32 @@ public class FirstPersonalController : MonoBehaviour
             fireSFX.Play();
             cooldown = Time.time + fireRate;
             ammo--;
+            Debug.Log(ammo);
+
             Fire();
         }
     }
 
     void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("Russian Water")) {
+            Debug.Log("Russian water!");
+
             if (speedLimit < maxLimit) {
                 speedLimit += vodkaSpeed;
             }
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Regular Water") {
+            Debug.Log("Regular water!");
+
             if (speedLimit > minLimit) {
                 speedLimit -= vodkaSpeed;
             }
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Ammo") {
+            Debug.Log("Ammo");
+
             ammo += 10;
             if (ammo > maxAmmo) {
                 ammo = maxAmmo;

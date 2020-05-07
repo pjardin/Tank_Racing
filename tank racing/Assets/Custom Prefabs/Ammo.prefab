@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 769389219855688126}
   - component: {fileID: 769389219855688127}
   - component: {fileID: 769389219855688124}
-  - component: {fileID: 769389219855688125}
   - component: {fileID: 6326655715843698950}
+  - component: {fileID: 769389219855688125}
   m_Layer: 13
-  m_Name: Voodka 1
-  m_TagString: Russian Water
+  m_Name: Ammo
+  m_TagString: Ammo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 769389219855687747}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -15.13, y: 1, z: 12.08}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.0169795, y: 3.0169795, z: 3.0169795}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -81,20 +81,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &769389219855688125
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 769389219855687747}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 125b7968c0fb1b94c84559923da7529a, type: 3}
 --- !u!54 &6326655715843698950
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -111,3 +97,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &769389219855688125
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769389219855687747}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 125b7968c0fb1b94c84559923da7529a, type: 3}
