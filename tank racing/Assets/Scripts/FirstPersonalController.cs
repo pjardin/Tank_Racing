@@ -70,6 +70,9 @@ public class FirstPersonalController : MonoBehaviour
     public GameObject compass;
     public Transform North;
 
+
+    private bool talking;
+
     // Start is called before the first frame update
     void Start() {
         //jumpHeight = 5.0f; // tanks cant jump, but...
@@ -87,6 +90,7 @@ public class FirstPersonalController : MonoBehaviour
         dustSpawnRr.Stop();
         muzzle.Stop();
         curDriv = false;
+        talking = false;
 
     }
 
@@ -226,7 +230,26 @@ public class FirstPersonalController : MonoBehaviour
             Debug.Log(ammo);
 
             Fire();
+        } else if (Input.GetButtonDown("Fire1") && Time.time > cooldown && ammo == 0)
+		{
+
+            if (talking == false)
+            {
+                talking = true;
+
+                int which = Random.Range(10, 13);
+
+                aSource[which].Play();
+                StartCoroutine(waitForFan(which)); // waits until aSource is done
+            }
+
         }
+
+
+
+
+
+
     }
 
     void OnCollisionEnter(Collision collision) {
@@ -236,6 +259,20 @@ public class FirstPersonalController : MonoBehaviour
             if (speedLimit < maxLimit) {
                 speedLimit += vodkaSpeed;
             }
+
+
+            if (talking == false)
+            {
+                talking = true;
+
+                int which = Random.Range(2, 5);
+
+                aSource[which].Play();
+                StartCoroutine(waitForFan(which)); // waits until aSource is done
+            }
+
+
+
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Regular Water") {
@@ -244,10 +281,31 @@ public class FirstPersonalController : MonoBehaviour
             if (speedLimit > minLimit) {
                 speedLimit -= vodkaSpeed;
             }
+
+            if (talking == false)
+            {
+                talking = true;
+
+                int which = Random.Range(6, 9);
+
+                aSource[which].Play();
+                StartCoroutine(waitForFan(which)); // waits until aSource is done
+            }
+
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Ammo") {
             Debug.Log("Ammo");
+
+            if (talking == false)
+            {
+                talking = true;
+
+                int which = Random.Range(13, 16);
+
+                aSource[which].Play();
+                StartCoroutine(waitForFan(which)); // waits until aSource is done
+            }
 
             ammo += 10;
             if (ammo > maxAmmo) {
@@ -269,6 +327,13 @@ public class FirstPersonalController : MonoBehaviour
         muzzle.Play();
         rbody.AddForceAtPosition(-bulletSpawn.up * recoil, bulletSpawn.transform.position);
         Destroy(bullet, 5.0f);
+    }
+
+
+    IEnumerator waitForFan(int which)
+    {
+        yield return new WaitForSeconds(aSource[which].clip.length);
+        talking = false;
     }
 
 }

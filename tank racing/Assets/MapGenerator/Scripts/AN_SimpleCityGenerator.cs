@@ -202,7 +202,7 @@ public class AN_SimpleCityGenerator : MonoBehaviour
 
                                 Instantiate(start, new Vector3Int(x - MapLength / 2 + CityCentre.x, 0, y - MapLength / 2 + CityCentre.y) * SqareLength, Quaternion.Euler(0, 90 * Random.Range(0, 4), 0));
 
-                                tank.transform.position = new Vector3Int(x - MapLength / 2 + CityCentre.x, 1, y - MapLength / 2 + CityCentre.y) * SqareLength;
+                                tank.transform.position = new Vector3Int(x - MapLength / 2 + CityCentre.x, 0, y - MapLength / 2 + CityCentre.y) * SqareLength;
 
                                 createdStart = true;
                             }
