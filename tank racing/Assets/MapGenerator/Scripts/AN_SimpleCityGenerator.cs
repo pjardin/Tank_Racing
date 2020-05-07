@@ -13,6 +13,14 @@ public class AN_SimpleCityGenerator : MonoBehaviour
     int [,] IntMap;
     List<Vector2Int> Vacant = new List<Vector2Int>();
 
+
+    public GameObject start;
+    public GameObject finish;
+
+    public GameObject tank;
+    public GameObject line;
+
+
     private void Start()
     {
         Debug.Log("Generating in game object : " + gameObject.name);
@@ -170,17 +178,47 @@ public class AN_SimpleCityGenerator : MonoBehaviour
 
     IEnumerator BuildCity() // instantiate finished city version
     {
+
+        bool createdStart = false;
+        bool createdFinish = false;
+
+
         for (int x = 1; x < IntMap.GetLength(0) - 1; x++)
         {
             for (int y = 1; y < IntMap.GetLength(1) - 1; y++)
             {
+
+
+
                 int selected;
                 switch (IntMap[x, y])
                 {
                     case (1): // 1x1
                         {
-                            selected = SelectPrefab(List1x1);
-                            Instantiate( List1x1[selected].gameObject, new Vector3Int(x - MapLength / 2 + CityCentre.x, 0, y - MapLength / 2 + CityCentre.y) * SqareLength, Quaternion.Euler(0, 90 * Random.Range(0,4), 0) );
+                            if (createdStart == false && (x >= MapLength / 2) && (y >= MapLength / 2)) {
+                                Debug.Log("CREATED START!");
+
+                                Instantiate(start, new Vector3Int(x - MapLength / 2 + CityCentre.x, 0, y - MapLength / 2 + CityCentre.y) * SqareLength, Quaternion.Euler(0, 90 * Random.Range(0, 4), 0));
+
+                                tank.transform.position = new Vector3Int(x - MapLength / 2 + CityCentre.x, 1, y - MapLength / 2 + CityCentre.y) * SqareLength;
+
+                                createdStart = true;
+                            }
+                            else if (createdFinish == false && (x >= MapLength / 2) && (y >= MapLength / 2))
+                            {
+                                Debug.Log("CREATED finish!");
+
+                                Instantiate(finish, new Vector3Int(x - MapLength / 2 + CityCentre.x, 0, y - MapLength / 2 + CityCentre.y) * SqareLength, Quaternion.Euler(0, 90 * Random.Range(0, 4), 0));
+
+                                line.transform.position = new Vector3Int(x - MapLength / 2 + CityCentre.x, 0, y - MapLength / 2 + CityCentre.y) * SqareLength;
+
+                                createdFinish = true;
+                            }
+                            else {
+                                selected = SelectPrefab(List1x1);
+                                Instantiate( List1x1[selected].gameObject, new Vector3Int(x - MapLength / 2 + CityCentre.x, 0, y - MapLength / 2 + CityCentre.y) * SqareLength, Quaternion.Euler(0, 90 * Random.Range(0,4), 0) );
+                            }
+
                             break;
                         }
                     case (21): // 1x2

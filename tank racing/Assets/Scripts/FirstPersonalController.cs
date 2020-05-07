@@ -134,7 +134,6 @@ public class FirstPersonalController : MonoBehaviour
             if (engineSFX.pitch > 0.5f)
             {
                 engineSFX.pitch -= 0.02f;
-                Debug.Log(engineSFX.pitch);
 
             }
 
@@ -144,7 +143,6 @@ public class FirstPersonalController : MonoBehaviour
             if (engineSFX.pitch < 1.0f)
             {
                 engineSFX.pitch += 0.02f;
-                Debug.Log(engineSFX.pitch);
 
             }
         }
