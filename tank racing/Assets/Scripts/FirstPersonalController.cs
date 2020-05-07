@@ -79,6 +79,8 @@ public class FirstPersonalController : MonoBehaviour
         fireSFX = aSource[0];
         engineSFX = aSource[1];
 
+        engineSFX.Play();
+
         dustSpawnLf.Stop();
         dustSpawnLr.Stop();
         dustSpawnRf.Stop();
@@ -119,17 +121,35 @@ public class FirstPersonalController : MonoBehaviour
         float accelR = accel;
         if (direction.x != 0) {
             accelR *= (direction.x);    //apply direction to acceleration
-            EngineSound();
         }  
         if (direction.z != 0) {
             accelR *= (-rotationSpeed * direction.z);   // if turnig apply rotation speed mutiplier
-            EngineSound();
-        } 
+        }
+
+
         if (direction.x == 0 && direction.z == 0)
         {
             curDriv = false;
-            engineSFX.Stop();
+
+            if (engineSFX.pitch > 0.5f)
+            {
+                engineSFX.pitch -= 0.02f;
+                Debug.Log(engineSFX.pitch);
+
+            }
+
+
+        } else
+		{
+            if (engineSFX.pitch < 1.0f)
+            {
+                engineSFX.pitch += 0.02f;
+                Debug.Log(engineSFX.pitch);
+
+            }
         }
+
+
         if ((direction != Vector3.zero) && (curSpeed >= 3.0f) && !Rdust) {
             Rdust = true;
             dustSpawnRr.Play();
@@ -245,12 +265,4 @@ public class FirstPersonalController : MonoBehaviour
         Destroy(bullet, 5.0f);
     }
 
-    private void EngineSound()
-    {
-        if (!curDriv)
-        {
-            curDriv = true;
-            engineSFX.Play();
-        }
-    }
 }
