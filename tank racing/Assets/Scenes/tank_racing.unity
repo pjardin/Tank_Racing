@@ -4902,6 +4902,7 @@ GameObject:
   - component: {fileID: 228798410}
   - component: {fileID: 228798409}
   - component: {fileID: 228798408}
+  - component: {fileID: 228798411}
   m_Layer: 12
   m_Name: SK_Veh_Tank_01_MgGun_01
   m_TagString: Untagged
@@ -4984,9 +4985,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 228798406}
   m_Mesh: {fileID: 4300010, guid: f04fe4c214ca77a40803cb373d0f0f68, type: 3}
+--- !u!114 &228798411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228798406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7efb32eb9835f6f468becc9939493c3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 343223934}
 --- !u!1 &343223933 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8584922157137572572, guid: a5148acfcbca1054590bcbc5c552c9c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 9136250070235123137}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &343223934 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8584922157137572568, guid: a5148acfcbca1054590bcbc5c552c9c7,
     type: 3}
   m_PrefabInstance: {fileID: 9136250070235123137}
   m_PrefabAsset: {fileID: 0}
@@ -32214,12 +32234,12 @@ MonoBehaviour:
   ListAngle:
   - {fileID: 8937669273706397048, guid: 4af15091208772449a2ed1e677b50277, type: 3}
   ListSqare:
-  - {fileID: 7547326698740222382, guid: cf7f93f99409ce04ca9881bef0d9ca2e, type: 3}
+  - {fileID: 7547326698740222382, guid: 201e186ec4ab9924b9064469a1f7d867, type: 3}
   start: {fileID: 4355988314135795838, guid: 1a6f9ac484e1346799ecaa82c18a8669, type: 3}
   finish: {fileID: 4355988314135795838, guid: 0b9915066ece141e69e81b48ae3c3c38, type: 3}
   tank: {fileID: 932834263}
   line: {fileID: 343223933}
-  offset: 0
+  offset: 22
 --- !u!4 &1767183584430479705
 Transform:
   m_ObjectHideFlags: 0
@@ -32411,6 +32431,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Finish Line
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584922157137572572, guid: a5148acfcbca1054590bcbc5c552c9c7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     - target: {fileID: 9136250070278587118, guid: a5148acfcbca1054590bcbc5c552c9c7,
         type: 3}

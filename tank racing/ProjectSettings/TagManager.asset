@@ -11,6 +11,7 @@ TagManager:
   - Debris
   - Ground
   - FX
+  - Ammo
   layers:
   - Default
   - TransparentFX
