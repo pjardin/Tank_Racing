@@ -1,12 +1,12 @@
 Place assests in empty map block of whatever size you want
 
 buildings:
-	add rigidbody component, set is kinematic true
+	add rigidbody component, set is kinematic true, set weight to around 1000
 	add mesh collider, set convex true
 	set layer and tag to buildings
 	
 moveable objects:
-	add rigidbody component, set is kinematic true
+	add rigidbody component, set is kinematic true, set weight to around 50-100
 	add mesh collider, set convex true
 	set tag to debris
 	
