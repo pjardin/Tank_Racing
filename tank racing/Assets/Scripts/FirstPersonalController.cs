@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FirstPersonalController : MonoBehaviour
 {
@@ -74,6 +75,10 @@ public class FirstPersonalController : MonoBehaviour
     private bool talking;
     private float maxPitch = 1.0f;
 
+    //HUD
+    public Slider drunk;
+    public Text ammoCount;
+
     // Start is called before the first frame update
     void Start() {
         //jumpHeight = 5.0f; // tanks cant jump, but...
@@ -118,6 +123,17 @@ public class FirstPersonalController : MonoBehaviour
 
             float f = Mathf.MoveTowardsAngle(camPivot.transform.localEulerAngles.y, 0, camRot * Time.deltaTime);
             camPivot.transform.localEulerAngles = new Vector3(0, f, 0);
+        }
+
+        //Update HUD
+        drunk.value = speedLimit;
+        if (ammo < 10 && ammo != 0)
+        {
+            ammoCount.text = "0" + ammo.ToString();
+        }
+        else
+        {
+            ammoCount.text = ammo.ToString();
         }
 
         //Forward/Rotational movement
