@@ -23,10 +23,38 @@ public class AN_SimpleCityGenerator : MonoBehaviour
 
     private int offset;
 
+    private AudioSource[] aSource; //array of all AudioSource Components
+
+
     private void Start()
     {
+        aSource = GetComponents<AudioSource>();
 
         offset = shareDataClass.offset;
+
+
+		switch (offset)
+		{
+            case 1:
+                aSource[0].Play();
+                break;
+            case 5:
+                aSource[1].Play();
+                break;
+            case 10:
+                aSource[2].Play();
+                break;
+            case 15:
+                aSource[3].Play();
+                break;
+            case 20:
+                aSource[4].Play();
+                break;
+            default:
+                aSource[0].Play();
+                break;
+		}
+
 
         Debug.Log("Generating in game object : " + gameObject.name);
         MapLength = Mathf.FloorToInt(Mathf.Sqrt( CityZoneCount * 3) );
