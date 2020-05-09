@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HowToPlay_ReturnToMenu : MonoBehaviour
 {
@@ -8,9 +9,13 @@ public class HowToPlay_ReturnToMenu : MonoBehaviour
     public GUISkin skin;
     private string obHow;
     public GameObject board;
-    public Material Inst;
-    public Material Obj;
-    private bool page;
+    public Texture env;
+    public Texture inst;
+    public Texture obj;
+    private enum State { ENV, HOW, OBJ };
+    private bool pass;
+
+    private State state;
 
     void OnGUI()
     {
@@ -21,26 +26,37 @@ public class HowToPlay_ReturnToMenu : MonoBehaviour
         }
         if (GUI.Button(new Rect(Screen.width - 220, Screen.height - 120, 200, 100), obHow))
         {
-            if (!page)
+         
+            switch (state)
             {
-                board.GetComponent<MeshRenderer>().material = Obj;
-                obHow = "Instructions";
-                page = true;
+                case State.ENV:
+                    state = State.OBJ;
+                    board.GetComponent<RawImage>().texture = obj;
+                    obHow = "Instructions";
+                    break;
+
+                case State.OBJ:
+                    state = State.HOW;
+                    board.GetComponent<RawImage>().texture = inst;
+                    obHow = "Environment";
+                    break;
+
+                case State.HOW:
+                    state = State.ENV;
+                    board.GetComponent<RawImage>().texture = env;
+                    obHow = "Objective";
+                    break;
+
             }
 
-            else
-            {
-                board.GetComponent<MeshRenderer>().material = Inst;
-                obHow = "Objective";
-                page = false;
-            }
         }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        page = false;
+        board.GetComponent<RawImage>().texture = env;
+        state = State.ENV;
         obHow = "Objective";
     }
 
