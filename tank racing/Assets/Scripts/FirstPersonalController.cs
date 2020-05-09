@@ -72,6 +72,7 @@ public class FirstPersonalController : MonoBehaviour
 
 
     private bool talking;
+    private float maxPitch = 1.0f;
 
     // Start is called before the first frame update
     void Start() {
@@ -137,16 +138,16 @@ public class FirstPersonalController : MonoBehaviour
 
             if (engineSFX.pitch > 0.5f)
             {
-                engineSFX.pitch -= 0.02f;
+                engineSFX.pitch -= 0.04f;
 
             }
 
 
         } else
 		{
-            if (engineSFX.pitch < 1.0f)
+            if (engineSFX.pitch < maxPitch)
             {
-                engineSFX.pitch += 0.02f;
+                engineSFX.pitch += 0.04f;
 
             }
         }
@@ -258,6 +259,7 @@ public class FirstPersonalController : MonoBehaviour
 
             if (speedLimit < maxLimit) {
                 speedLimit += vodkaSpeed;
+                maxPitch += 0.05f;
             }
 
 
@@ -280,6 +282,8 @@ public class FirstPersonalController : MonoBehaviour
 
             if (speedLimit > minLimit) {
                 speedLimit -= vodkaSpeed;
+                maxPitch -= 0.05f;
+
             }
 
             if (talking == false)

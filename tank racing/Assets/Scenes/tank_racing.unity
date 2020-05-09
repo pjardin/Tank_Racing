@@ -10045,7 +10045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b60f794e1e8b4b69a34dee8abf92edc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skin: {fileID: 0}
+  skin: {fileID: 11400000, guid: 83c7291a7d01c1e43acac9da946822ec, type: 2}
   killCount: 0
 --- !u!4 &716482818
 Transform:

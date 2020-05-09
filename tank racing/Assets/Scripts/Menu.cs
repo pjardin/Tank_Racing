@@ -13,7 +13,7 @@ public class Menu : MonoBehaviour
     void Start()
     {
         buttonWidth = 200;
-        buttonHeight = 50;
+        buttonHeight = 60;
         origin_x = Screen.width/2 - buttonWidth/2;
         origin_y = Screen.height/2 - buttonHeight*2;
     }
