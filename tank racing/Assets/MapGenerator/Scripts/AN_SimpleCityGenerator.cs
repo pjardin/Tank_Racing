@@ -21,10 +21,13 @@ public class AN_SimpleCityGenerator : MonoBehaviour
     public GameObject line;
 
 
-    public int offset;
+    private int offset;
 
     private void Start()
     {
+
+        offset = shareDataClass.offset;
+
         Debug.Log("Generating in game object : " + gameObject.name);
         MapLength = Mathf.FloorToInt(Mathf.Sqrt( CityZoneCount * 3) );
         IntMap = new int[MapLength, MapLength];
@@ -185,6 +188,10 @@ public class AN_SimpleCityGenerator : MonoBehaviour
         bool createdFinish = false;
 
 
+        var YN = Mathf.Pow(-1,Random.Range(1, 3));
+        var XN = Mathf.Pow(-1, Random.Range(1, 3));
+
+
         for (int x = 1; x < IntMap.GetLength(0) - 1; x++)
         {
             for (int y = 1; y < IntMap.GetLength(1) - 1; y++)
@@ -197,7 +204,7 @@ public class AN_SimpleCityGenerator : MonoBehaviour
                 {
                     case (1): // 1x1
                         {
-                            if (createdStart == false && (x >= MapLength / 2 - offset) && (y >= MapLength / 2 - offset)) {
+                            if (createdStart == false && (x >= MapLength / 2) && (y >= MapLength / 2)) {
                                 Debug.Log("CREATED START!");
 
                                 Instantiate(start, new Vector3Int(x - MapLength / 2 + CityCentre.x, 0, y - MapLength / 2 + CityCentre.y) * SqareLength, Quaternion.Euler(0, 90 * Random.Range(0, 4), 0));
@@ -206,7 +213,7 @@ public class AN_SimpleCityGenerator : MonoBehaviour
 
                                 createdStart = true;
                             }
-                            else if (createdFinish == false && (x >= MapLength / 2 + offset) && (y >= MapLength / 2 + offset))
+                            else if (createdFinish == false && (x >= MapLength / 2 + offset * XN) && (y >= MapLength / 2 + offset * YN))
                             {
                                 Debug.Log("CREATED finish!");
 
