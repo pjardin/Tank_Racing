@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4df48c5366b91454ca85715f37eade36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skin: {fileID: 0}
+  skin: {fileID: 11400000, guid: 83c7291a7d01c1e43acac9da946822ec, type: 2}
   board: {fileID: 237612754}
   env: {fileID: 2800000, guid: dcf63c4df355974448d68174e5164bb4, type: 3}
   inst: {fileID: 2800000, guid: a3458581385bbd94abafacf804fd8b2a, type: 3}

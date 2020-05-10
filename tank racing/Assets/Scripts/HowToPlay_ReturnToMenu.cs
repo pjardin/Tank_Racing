@@ -24,7 +24,7 @@ public class HowToPlay_ReturnToMenu : MonoBehaviour
         {
             Application.LoadLevel(0);
         }
-        if (GUI.Button(new Rect(Screen.width - 220, Screen.height - 120, 200, 100), obHow))
+        if (GUI.Button(new Rect(Screen.width - 220, 20, 200, 100), obHow))
         {
          
             switch (state)

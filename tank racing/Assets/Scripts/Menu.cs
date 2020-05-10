@@ -9,6 +9,14 @@ public class Menu : MonoBehaviour
 	private int origin_x;
 	private int origin_y;
 	public GUISkin mySkin;
+    //public Script GTimer;
+    public static string time1;
+    public static string time2;
+    public static string time3;
+    public static string time4;
+    public static string time5;
+    public float[] tmpTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,31 +28,41 @@ public class Menu : MonoBehaviour
 
     void OnGUI() {
     	GUI.skin = mySkin;
-    	if(GUI.Button(new Rect(origin_x, origin_y + buttonHeight * -3 + 60, buttonWidth,buttonHeight), "LEVEL 1")) {
+    	if(GUI.Button(new Rect(origin_x, origin_y + buttonHeight * -3 + 60, buttonWidth,buttonHeight), "LEVEL 1\nBest Time: " + time1)) {
+            GTimer.reset();
+            GTimer.lvl = GTimer.Level.O;
             shareDataClass.offset = 1;
             Application.LoadLevel(1);
     	}
 
-        if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * -2 + 60, buttonWidth, buttonHeight), "LEVEL 2"))
+        if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * -2 + 60, buttonWidth, buttonHeight), "LEVEL 2\nBest Time: " + time2))
         {
+            GTimer.reset();
+            GTimer.lvl = GTimer.Level.Tw;
             shareDataClass.offset = 5;
             Application.LoadLevel(1);
         }
 
-        if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * -1 + 60, buttonWidth, buttonHeight), "LEVEL 3"))
+        if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * -1 + 60, buttonWidth, buttonHeight), "LEVEL 3\nBest Time: " + time3))
         {
+            GTimer.reset();
+            GTimer.lvl = GTimer.Level.Th;
             shareDataClass.offset = 10;
             Application.LoadLevel(1);
         }
 
-        if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * 0 + 60, buttonWidth, buttonHeight), "LEVEL 4"))
+        if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * 0 + 60, buttonWidth, buttonHeight), "LEVEL 4\nBest Time: " + time4))
         {
+            GTimer.reset();
+            GTimer.lvl = GTimer.Level.Fo;
             shareDataClass.offset = 15;
             Application.LoadLevel(1);
         }
 
-        if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * 1 + 60, buttonWidth, buttonHeight), "LEVEL 5"))
+        if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * 1 + 60, buttonWidth, buttonHeight), "LEVEL 5\nBest Time: " + time5))
         {
+            GTimer.reset();
+            GTimer.lvl = GTimer.Level.Fi;
             shareDataClass.offset = 20;
             Application.LoadLevel(1);
         }
@@ -64,6 +82,7 @@ public class Menu : MonoBehaviour
     	}
     }
 }
+
 
 
 //https://stackoverflow.com/questions/42393259/load-scene-with-param-variable-unity

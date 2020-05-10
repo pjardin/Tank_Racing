@@ -98,6 +98,8 @@ public class FirstPersonalController : MonoBehaviour
         curDriv = false;
         talking = false;
 
+
+
     }
 
     // Update is called once per frame
@@ -127,7 +129,7 @@ public class FirstPersonalController : MonoBehaviour
 
         //Update HUD
         drunk.value = speedLimit;
-        if (ammo < 10 && ammo != 0)
+        if (ammo < 10)
         {
             ammoCount.text = "0" + ammo.ToString();
         }
