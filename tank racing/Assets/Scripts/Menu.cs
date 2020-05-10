@@ -29,7 +29,7 @@ public class Menu : MonoBehaviour
 
     void OnGUI() {
     	GUI.skin = mySkin;
-        if (GUI.Button(new Rect(origin_x, origin_y + (int)(buttonHeight * -3.6) + 60, buttonWidth, buttonHeight), "LEVEL 1\nBest Time: " + time1))
+        if (GUI.Button(new Rect(origin_x - (int)(buttonWidth * .5) - 5, origin_y + (int)(buttonHeight * -1.7) + 60, buttonWidth, buttonHeight), "LEVEL 1\nBest Time: " + time1))
         {
             GTimer.reset();
             GTimer.lvl = GTimer.Level.O;
@@ -37,7 +37,7 @@ public class Menu : MonoBehaviour
             Application.LoadLevel(1);
     	}
 
-        if (GUI.Button(new Rect(origin_x, origin_y + (int)(buttonHeight * -2.4) + 60, buttonWidth, buttonHeight), "LEVEL 2\nBest Time: " + time2))
+        if (GUI.Button(new Rect(origin_x + (int)(buttonWidth * .5) + 5, origin_y + (int)(buttonHeight * -1.7) + 60, buttonWidth, buttonHeight), "LEVEL 2\nBest Time: " + time2))
         {
             GTimer.reset();
             GTimer.lvl = GTimer.Level.Tw;
@@ -45,7 +45,7 @@ public class Menu : MonoBehaviour
             Application.LoadLevel(1);
         }
 
-        if (GUI.Button(new Rect(origin_x, origin_y + (int)(buttonHeight * -1.2) + 60, buttonWidth, buttonHeight), "LEVEL 3\nBest Time: " + time3))
+        if (GUI.Button(new Rect(origin_x - (int)(buttonWidth * .5) - 5, origin_y + (int)(buttonHeight * -0.5) + 60, buttonWidth, buttonHeight), "LEVEL 3\nBest Time: " + time3))
         {
             GTimer.reset();
             GTimer.lvl = GTimer.Level.Th;
@@ -53,7 +53,7 @@ public class Menu : MonoBehaviour
             Application.LoadLevel(1);
         }
 
-        if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * 0 + 60, buttonWidth, buttonHeight), "LEVEL 4\nBest Time: " + time4))
+        if (GUI.Button(new Rect(origin_x + (int)(buttonWidth * .5) + 5, origin_y + (int)(buttonHeight * -0.5) + 60, buttonWidth, buttonHeight), "LEVEL 4\nBest Time: " + time4))
         {
             GTimer.reset();
             GTimer.lvl = GTimer.Level.Fo;
@@ -61,7 +61,7 @@ public class Menu : MonoBehaviour
             Application.LoadLevel(1);
         }
 
-        if (GUI.Button(new Rect(origin_x, origin_y + (int)(buttonHeight * 1.2) + 60, buttonWidth, buttonHeight), "LEVEL 5\nBest Time: " + time5))
+        if (GUI.Button(new Rect(origin_x, origin_y + (int)(buttonHeight * .7) + 60, buttonWidth, buttonHeight), "LEVEL 5\nBest Time: " + time5))
         {
             GTimer.reset();
             GTimer.lvl = GTimer.Level.Fi;
