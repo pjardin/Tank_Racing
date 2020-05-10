@@ -33,6 +33,7 @@ public class ShellScript : MonoBehaviour
         }
 
         if (collision.gameObject.tag == "Building") {
+            collision.gameObject.GetComponent<Rigidbody>().useGravity = true;
             GameObject bullet = Instantiate(
                 BuildingExplode,
                 collision.gameObject.transform.position,

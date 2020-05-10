@@ -129,18 +129,15 @@ public class FirstPersonalController : MonoBehaviour
 
         //Update HUD
         drunk.value = speedLimit;
-        if (ammo < 10)
-        {
+        if (ammo < 10) {
             ammoCount.text = "0" + ammo.ToString();
-        }
-        else
-        {
+        } else {
             ammoCount.text = ammo.ToString();
         }
 
         //Forward/Rotational movement
         if (direction.x < 0) { direction.x *= reverseSpeed; } // if reversing apply reverse speed mutiplier
-        curSpeed = rbody.velocity.magnitude * 3.6f;
+        curSpeed = rbody.velocity.magnitude * 3.5f;
         float accelR = accel;
         if (direction.x != 0) {
             accelR *= (direction.x);    //apply direction to acceleration
@@ -150,21 +147,17 @@ public class FirstPersonalController : MonoBehaviour
         }
 
 
-        if (direction.x == 0 && direction.z == 0)
-        {
+        if (direction.x == 0 && direction.z == 0) {
             curDriv = false;
 
-            if (engineSFX.pitch > 0.5f)
-            {
+            if (engineSFX.pitch > 0.5f) {
                 engineSFX.pitch -= 0.04f;
 
             }
 
 
-        } else
-		{
-            if (engineSFX.pitch < maxPitch)
-            {
+        } else {
+            if (engineSFX.pitch < maxPitch) {
                 engineSFX.pitch += 0.04f;
 
             }
@@ -180,6 +173,7 @@ public class FirstPersonalController : MonoBehaviour
             dustSpawnRr.Stop();
             dustSpawnRf.Stop(); 
         }
+
         if (curSpeed > speedLimit && direction.z == 0) { accelR = 0; } //if above speed limit and not turing, motors apply 0 torque
 
         float accelL = accel;
@@ -249,11 +243,9 @@ public class FirstPersonalController : MonoBehaviour
             Debug.Log(ammo);
 
             Fire();
-        } else if (Input.GetButtonDown("Fire1") && Time.time > cooldown && ammo == 0)
-		{
+        } else if (Input.GetButtonDown("Fire1") && Time.time > cooldown && ammo == 0) {
 
-            if (talking == false)
-            {
+            if (talking == false) {
                 talking = true;
 
                 int which = Random.Range(10, 13);
@@ -261,15 +253,9 @@ public class FirstPersonalController : MonoBehaviour
                 aSource[which].Play();
                 StartCoroutine(waitForFan(which)); // waits until aSource is done
             }
-
         }
-
-
-
-
-
-
     }
+
 
     void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("Russian Water")) {
@@ -280,9 +266,7 @@ public class FirstPersonalController : MonoBehaviour
                 maxPitch += 0.05f;
             }
 
-
-            if (talking == false)
-            {
+            if (talking == false) {
                 talking = true;
 
                 int which = Random.Range(2, 5);
@@ -290,11 +274,9 @@ public class FirstPersonalController : MonoBehaviour
                 aSource[which].Play();
                 StartCoroutine(waitForFan(which)); // waits until aSource is done
             }
-
-
-
             Destroy(collision.gameObject);
         }
+        
         if (collision.gameObject.tag == "Regular Water") {
             Debug.Log("Regular water!");
 
@@ -304,8 +286,7 @@ public class FirstPersonalController : MonoBehaviour
 
             }
 
-            if (talking == false)
-            {
+            if (talking == false) {
                 talking = true;
 
                 int which = Random.Range(6, 9);
@@ -316,11 +297,11 @@ public class FirstPersonalController : MonoBehaviour
 
             Destroy(collision.gameObject);
         }
+        
         if (collision.gameObject.tag == "Ammo") {
             Debug.Log("Ammo");
 
-            if (talking == false)
-            {
+            if (talking == false) {
                 talking = true;
 
                 int which = Random.Range(13, 16);
@@ -335,7 +316,9 @@ public class FirstPersonalController : MonoBehaviour
             }
             Destroy(collision.gameObject);
         }
+        
         if (collision.gameObject.tag == "Debris") {
+            collision.gameObject.GetComponent<Rigidbody>().useGravity = true;
             collision.gameObject.GetComponent<Rigidbody>().isKinematic = false; 
         }
     }
@@ -352,8 +335,7 @@ public class FirstPersonalController : MonoBehaviour
     }
 
 
-    IEnumerator waitForFan(int which)
-    {
+    IEnumerator waitForFan(int which) {
         yield return new WaitForSeconds(aSource[which].clip.length);
         talking = false;
     }
