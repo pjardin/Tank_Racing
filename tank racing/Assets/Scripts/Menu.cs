@@ -29,14 +29,15 @@ public class Menu : MonoBehaviour
 
     void OnGUI() {
     	GUI.skin = mySkin;
-    	if(GUI.Button(new Rect(origin_x, origin_y + buttonHeight * -3 + 60, buttonWidth,buttonHeight), "LEVEL 1\nBest Time: " + time1)) {
+        if (GUI.Button(new Rect(origin_x, origin_y + (int)(buttonHeight * -3.6) + 60, buttonWidth, buttonHeight), "LEVEL 1\nBest Time: " + time1))
+        {
             GTimer.reset();
             GTimer.lvl = GTimer.Level.O;
             shareDataClass.offset = 1;
             Application.LoadLevel(1);
     	}
 
-        if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * -2 + 60, buttonWidth, buttonHeight), "LEVEL 2\nBest Time: " + time2))
+        if (GUI.Button(new Rect(origin_x, origin_y + (int)(buttonHeight * -2.4) + 60, buttonWidth, buttonHeight), "LEVEL 2\nBest Time: " + time2))
         {
             GTimer.reset();
             GTimer.lvl = GTimer.Level.Tw;
@@ -44,7 +45,7 @@ public class Menu : MonoBehaviour
             Application.LoadLevel(1);
         }
 
-        if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * -1 + 60, buttonWidth, buttonHeight), "LEVEL 3\nBest Time: " + time3))
+        if (GUI.Button(new Rect(origin_x, origin_y + (int)(buttonHeight * -1.2) + 60, buttonWidth, buttonHeight), "LEVEL 3\nBest Time: " + time3))
         {
             GTimer.reset();
             GTimer.lvl = GTimer.Level.Th;
@@ -60,7 +61,7 @@ public class Menu : MonoBehaviour
             Application.LoadLevel(1);
         }
 
-        if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * 1 + 60, buttonWidth, buttonHeight), "LEVEL 5\nBest Time: " + time5))
+        if (GUI.Button(new Rect(origin_x, origin_y + (int)(buttonHeight * 1.2) + 60, buttonWidth, buttonHeight), "LEVEL 5\nBest Time: " + time5))
         {
             GTimer.reset();
             GTimer.lvl = GTimer.Level.Fi;
@@ -69,16 +70,17 @@ public class Menu : MonoBehaviour
         }
 
 
-        if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * 2 + 60, buttonWidth, buttonHeight), "How to Play"))
+        if (GUI.Button(new Rect(origin_x, origin_y + (int)(buttonHeight * 2.4) + 60, buttonWidth, buttonHeight), "How to Play"))
         {
             Application.LoadLevel(2);
         }
 
-            if (GUI.Button(new Rect(origin_x,origin_y+buttonHeight*3+60,buttonWidth,buttonHeight), "Quit")) {
-    		#if UNITY_EDITOR
+        if (GUI.Button(new Rect(origin_x, origin_y + (int)(buttonHeight * 3.6) + 60, buttonWidth, buttonHeight), "Quit"))
+        {
+            #if UNITY_EDITOR
     			UnityEditor.EditorApplication.isPlaying = false;
-    		#else
-    			Application.Quit();
+            #else
+                Application.Quit();
     		#endif
     	}
     }

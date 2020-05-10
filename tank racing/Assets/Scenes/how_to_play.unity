@@ -224,7 +224,7 @@ MonoBehaviour:
   board: {fileID: 237612754}
   env: {fileID: 2800000, guid: dcf63c4df355974448d68174e5164bb4, type: 3}
   inst: {fileID: 2800000, guid: a3458581385bbd94abafacf804fd8b2a, type: 3}
-  obj: {fileID: 2800000, guid: 2b9bf8c0e2eba0940b1540445795f7fd, type: 3}
+  obj: {fileID: 2800000, guid: 763ac5729c848134e82ec9ac636ccd5a, type: 3}
 --- !u!4 &1087969996
 Transform:
   m_ObjectHideFlags: 0
