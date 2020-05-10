@@ -24,6 +24,7 @@ public class Menu : MonoBehaviour
         buttonHeight = 60;
         origin_x = Screen.width/2 - buttonWidth/2;
         origin_y = Screen.height/2 - buttonHeight*2;
+        
     }
 
     void OnGUI() {

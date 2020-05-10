@@ -16,19 +16,25 @@ public class GTimer : MonoBehaviour
     public static Level lvl;
     public static float[] thisTime;
     public static float[] curBest;
+    public static bool firstStart = false;
 
     // Start is called before the first frame update
     void Start()
     {
         offset = Time.time;
-        bestTime1 = new float[] { 99f, 59f };
-        bestTime2 = new float[] { 99f, 59f };
-        bestTime3 = new float[] { 99f, 59f };
-        bestTime4 = new float[] { 99f, 59f };
-        bestTime5 = new float[] { 99f, 59f };
-        thisTime = new float[] { 99f, 59f };
-        curBest = new float[] { 99f, 59f };
-        //lvl = Level.O;
+
+        if (!firstStart)
+        {
+            bestTime1 = new float[] { 99f, 59f };
+            bestTime2 = new float[] { 99f, 59f };
+            bestTime3 = new float[] { 99f, 59f };
+            bestTime4 = new float[] { 99f, 59f };
+            bestTime5 = new float[] { 99f, 59f };
+            thisTime = new float[] { 99f, 59f };
+            curBest = new float[] { 99f, 59f };
+            //lvl = Level.O;
+            firstStart = true;
+        }
     }
 
     public static void reset()
